@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <h1>Customer Survey Form</h1>
+        <div class="survey-container">
+            <div id="surveyForm">
+                <div class="input-group">
+                    <div class="input-group-item">
+                        <label for="firstName">Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="input-group-item">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Is this first time You are using our products and service?</label>
+                    <div class="radio-options">
+                        <input type="radio" id="firstTimeYes" name="firstTime" value="yes" required>
+                        <label for="firstTimeYes">Yes</label>
+                        <input type="radio" id="firstTimeNo" name="firstTime" value="no" required>
+                        <label for="firstTimeNo">No</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Would you suggestion to your friends and collegues?</label>
+                    <div class="radio-options">
+                        <input type="radio" id="suggestYes" name="suggest" value="yes" required>
+                        <label for="suggestYes">Yes</label>
+                        <input type="radio" id="suggestNo" name="suggest" value="no" required>
+                        <label for="suggestNo">No</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>How satisfied are you with our company overall?</label>
+                    <div class="radio-options">
+                        <input type="radio" id="satisfied" name="satisfaction" value="satisfied" required>
+                        <label for="satisfied">Satisfied</label>
+                        <input type="radio" id="undecided" name="satisfaction" value="undecided" required>
+                        <label for="undecided">Undecided</label>
+                        <input type="radio" id="unsatisfied" name="satisfaction" value="unsatisfied" required>
+                        <label for="unsatisfied">Unsatisfied</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="suggestions">Do you have suggestions to improve our service:</label>
+                    <textarea id="suggestions" name="suggestions" rows="3"></textarea>
+                </div>
+
+                <button type="button" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content" id="popupContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
